@@ -53,5 +53,55 @@ print("Current objects count after GC ", gc.get_count())
 #You can modify GC setting to appear as per convinient
 gc.set_threshold(1000, 15, 15)
 
+# Sequence type
+# Sequence Types -- str, unicode, list, tuple, buffer, xrange
+#https://www.unicode.org/
+#https://docs.python.org/3/howto/unicode.html
 
+xyz = '\u0394'
+print("value of unicode is {} and type is {}".format(xyz, type(xyz)))
 
+xyz = '\u0063'
+print("value of unicode is {} and type is {}".format(xyz, type(xyz)))
+
+# List ==> Lists are constructed with square brackets, separating items with commas: [a, b, c]
+# https://www.geeksforgeeks.org/python-list/
+varList = [1,2,3]
+print(varList)
+
+varList = [3, 'akshay', 'sneha', 'deepika']
+print(varList)
+print(type(varList))
+print(type(varList[0]))
+varList = [14.6, 26.7, 20.34]
+print(varList)
+
+varList2 = [[]] * 3
+print(varList2)
+#varList2.append(15)
+print(varList2)
+varList2[0].append(15)
+print(varList2)
+
+# Tuple ==> Tuples are constructed by the comma operator, with or without enclosing parentheses
+# https://www.w3schools.com/python/python_tuples.asp
+varTuple = (12, 40, 22)
+print(varTuple)
+print(type(varTuple))
+print(varTuple[0])
+print((4, 'dfda', 535) + (12, 'gaurav', 25))
+
+# buffers are replaced by the memoryview in python 3: https://docs.python.org/3/c-api/memoryview.html
+# xrange is deprecated in python 3: https://www.geeksforgeeks.org/range-vs-xrange-python/
+
+# Membership statement: https://www.tutorialspoint.com/python/membership_operators_example.htm
+
+a, b = 20, 35
+varList3 = [20, 50, 22]
+
+print(a in varList3)
+print(b in varList3)
+print(a not in varList3)
+
+print(a is int)
+print(varList3 is not int)
