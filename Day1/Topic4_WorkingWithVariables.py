@@ -105,3 +105,63 @@ print(a not in varList3)
 
 print(a is int)
 print(varList3 is not int)
+
+# List iteration: https://www.geeksforgeeks.org/iterate-over-a-list-in-python/
+list = [1, 3, 5, 7, 9]
+# Using for loop
+print("Using for loop")
+for i in list:
+    print(i)
+
+# Iterating the index
+# same as 'for i in range(len(list))'
+print("Using len and range function")
+length = len(list)
+for i in range(length):
+    print(list[i])
+
+# Using while loop
+print("Using while loop")
+i = 0
+while i < length:
+    print(list[i])
+    i += 1
+
+# Using list comprehension
+print("Using list comprehension")
+[print(i) for i in list]
+
+# simple assignment and logical operators ***interesting*** https://docs.python.org/3/reference/simple_stmts.html
+
+
+# Mutable vs immutable Objects: https://www.geeksforgeeks.org/mutable-vs-immutable-objects-in-python/
+#Immutable Objects : These are of in-built types like int, float, bool, string, unicode, tuple.
+"""
+Mutable and immutable objects are handled differently in python. Immutable objects are quicker to access and are expensive to change because it involves the creation of a copy.
+Whereas mutable objects are easy to change.
+Use of mutable objects is recommended when there is a need to change the size or content of the object.
+"""
+tuple1 = (0, 1, 2, 3)
+#tuple1[0] = 4
+print(tuple1)
+
+message = "Welcome to GeeksforGeeks"
+#message[0] = 'p'
+print(message)
+
+#Mutable Objects : These are of type list, dict, set.
+# lists are mutable
+color = ["red", "blue", "green"]
+color[0] = "pink"
+color[-1] = "orange"
+print(color)
+
+# woraround for immutable objects
+tup = ([1,2,3,4], 'gaurav')
+tup[0].append(25)
+print(tup)
+
+# Multi target assignments
+a, b, c = 4, "gaurav", 24.5
+print("printed from multi target assignment {}, {}, {}".format(a, b, c))
+
