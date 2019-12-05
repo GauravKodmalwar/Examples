@@ -1,4 +1,9 @@
 #List are mutable
+"""
+Lists are one of the four built-in data structures in Python, together with tuples, dictionaries, and sets.
+They are used to store an ordered collection of items, which might be of different types but usually they aren't.
+Commas separate the elements that are contained within a list and enclosed in square brackets.
+"""
 varList = [2, 3, 5 , 15.2]
 print(id(varList))
 varList[2] = "python"

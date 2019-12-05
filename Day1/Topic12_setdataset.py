@@ -1,4 +1,9 @@
 # Understanding and using set datatype: https://www.w3schools.com/python/python_sets.asp
+"""
+What is a set in Python? A set is an unordered collection of items.
+Every element is unique (no duplicates) and must be immutable (which cannot be changed).
+Sets can be used to perform mathematical set operations like union, intersection, symmetric difference etc.
+"""
 fruitSet = {"apple", "banana", "pineapple", "guava", "pineapple", "mango", "banana"}
 
 print(fruitSet)

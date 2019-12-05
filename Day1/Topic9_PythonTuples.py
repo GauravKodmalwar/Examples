@@ -1,4 +1,10 @@
 # Immutable : https://www.w3schools.com/python/python_tuples.asp
+"""
+Tuples are used for grouping data
+A tuple lets us “chunk” together related information and use it as a single thing.
+Tuples support the same sequence operations as strings. ... So like strings, tuples are immutable.
+Once Python has created a tuple in memory, it cannot be changed.
+"""
 varTuple = (5, 20, 40)
 #varTuple[0] = 5  # TypeError: 'tuple' object does not support item assignment
 thistuple = ("apple",)
