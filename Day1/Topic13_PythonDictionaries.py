@@ -1,4 +1,4 @@
-#Python dictionaries
+#Python dictionaries: https://www.geeksforgeeks.org/python-dictionary/
 """
 Dictionary in Python is an unordered collection of data values, used to store data values like a map,
 which unlike other Data Types that hold only single value as an element, Dictionary holds key:value pair.
@@ -38,3 +38,7 @@ print(temp)
 print(thisdict)
 
 # Explore few more functions yourself like popitem, copy, clear, dict(name=value, name=value), update, values, keys
+
+# Dictionary indexing
+
+#Dictionary vs List and tuples

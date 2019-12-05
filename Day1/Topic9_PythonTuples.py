@@ -29,6 +29,10 @@ print("smalles number in tuple: ", min(b))
 del a
 #print(a)
 
+a, b, c = varTuple
+print("multi assignment in Python")
+print(a, b, c)
+
 #Tuples indexing
 print("Indexing tuple just like list")
 print(thistuple[1])
