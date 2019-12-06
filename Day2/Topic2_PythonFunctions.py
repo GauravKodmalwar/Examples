@@ -41,3 +41,42 @@ print(x(5))
 x = lambda a, b : a * b
 print(x(5, 6))
 
+# Local variables: https://www.geeksforgeeks.org/global-local-variables-python/
+def f():
+  print(s)
+s = "I love Python"
+f()
+
+# Global and local variables
+def f():
+  s = "Me too."
+  print(s)
+s = "I love Python"
+print(s)
+f()
+
+# Global and local overlap
+
+# This will give error ==> UnboundLocalError: local variable 's' referenced before assignment
+"""
+def f():
+  print(s)
+  s = "Me too."
+  print(s)
+s = "I love Python"
+print(s)
+f()
+"""
+
+def f():
+  global s
+  print(s)
+  s = "Me too."
+  print(s)
+s = "I love Python"
+print(s)
+f()
+
+
+# Understanding __builtin__
+import builtins
