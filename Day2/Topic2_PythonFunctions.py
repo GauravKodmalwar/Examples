@@ -114,7 +114,62 @@ print(constants.PI)
 print(constants.WEEKLY_DAYS)
 print(constants.NUMBER_OF_MONTHS)
 
+# Keyword argument or named arguments methods: https://treyhunner.com/2018/04/keyword-arguments-in-python/
+from math import sqrt
+
+def quadratic(a, b, c):
+  x1 = -b / (2 * a)
+  x2 = sqrt(b ** 2 - 4 * a * c) / (2 * a)
+  return (x1 + x2), (x1 - x2)
+
+print(quadratic(31, 93, 62))
+print(quadratic(62, 93, 31))
+print(quadratic(a=31, b=93, c=62))
+print(quadratic(c=62, a=31, b=93))
+
 # Argument matching methods
+# Unnamed argument matching function
+"""
+The special syntax *args in function definitions in python is used to pass a variable number of arguments to a function. 
+It is used to pass a non-keyworded, variable-length argument list.
+"""
+print("************** variable length and unnamed arguments **************")
 
-#Keyword argument methods
+def myFun(*argv):
+  for arg in argv:
+    print(arg)
 
+myFun('Hello', 'Welcome', 'to', 'GeeksforGeeks')
+
+def product(*numbers, initial=1):
+  total = initial
+  for n in numbers:
+    total *= n
+  return total
+
+print(product(4, 6, initial=5))
+
+"""
+The special syntax **kwargs in function definitions in python is used to pass a keyworded, variable-length argument list.
+"""
+print("************** variable length but named arguments **************")
+def myFun(**kwargs):
+  for key, value in kwargs.items():
+    print("%s == %s" % (key, value))
+
+myFun(first='Geeks', mid='for', last='Geeks')
+
+#arbitrary keyword arguments
+print("************** without declaring variable keyword lengths in function definition **************")
+def myFun(arg1, arg2, arg3):
+  print("arg1:", arg1)
+  print("arg2:", arg2)
+  print("arg3:", arg3)
+
+args = ("Geeks", "for", "Geeks")
+myFun(*args)
+
+kwargs = {"arg1": "Geeks", "arg2": "for", "arg3": "Geeks"}
+myFun(**kwargs)
+
+"*********** yield ***********"
