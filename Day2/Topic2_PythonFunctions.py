@@ -159,7 +159,7 @@ def myFun(**kwargs):
 
 myFun(first='Geeks', mid='for', last='Geeks')
 
-#arbitrary keyword arguments
+#arbitrary keyword arguments: https://www.geeksforgeeks.org/args-kwargs-python/
 print("************** without declaring variable keyword lengths in function definition **************")
 def myFun(arg1, arg2, arg3):
   print("arg1:", arg1)
