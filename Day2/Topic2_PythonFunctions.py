@@ -78,5 +78,43 @@ print(s)
 f()
 
 
-# Understanding __builtin__
+# all list of builtin functions: https://docs.python.org/3/library/functions.html
+# all list of builtin functions: https://www.w3schools.com/python/python_ref_functions.asp
+
+# Understanding __builtin__ : https://docs.python.org/2/library/__builtin__.html
+"""
+This module provides direct access to all 'built-in' identifiers of Python; 
+for example, __builtin__. open is the full name for the built-in function open() .
+"""
 import builtins
+
+def open(path):
+    f = builtins.open(path, 'r')
+    return UpperCaser(f)
+
+class UpperCaser:
+    '''Wrapper around a file that converts output to upper-case.'''
+
+    def __init__(self, f):
+        self._f = f
+
+    def read(self, count=-1):
+        return self._f.read(count).upper()
+
+print(open('pythonIO.txt').read())
+
+# preventing variable modification
+"""
+A constant is a type of variable that holds values, which cannot be changed. 
+In reality, we rarely use constants in Python. 
+Constants are usually declared and assigned on a different module/file. Then, they are imported to the main file.
+"""
+import constants
+print(constants.PI)
+print(constants.WEEKLY_DAYS)
+print(constants.NUMBER_OF_MONTHS)
+
+# Argument matching methods
+
+#Keyword argument methods
+
