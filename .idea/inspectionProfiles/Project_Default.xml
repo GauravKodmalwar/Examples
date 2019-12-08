@@ -5,6 +5,7 @@
       <option name="ignoredIdentifiers">
         <list>
           <option value="Day1.Topic7_Debugging.*" />
+          <option value="*.*" />
         </list>
       </option>
     </inspection_tool>

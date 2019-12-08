@@ -71,7 +71,7 @@ blu = Parrot("Blu", 10) # instantiate the object
 print(blu.sing("'Happy'")) # call our instance methods
 print(blu.dance())
 
-# Composition, sub-classes and derivation
+# Composition, sub-classes and derivation: https://realpython.com/inheritance-composition-python/#composition-in-python
 
 # Inheritance: https://www.programiz.com/python-programming/object-oriented-programming
 class Bird:
