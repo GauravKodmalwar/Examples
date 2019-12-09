@@ -27,14 +27,18 @@ abc = 1
 bac = abc
 cab = bac
 
-print(sys.getrefcount(abc))
-# *******************Output is wrong, have to research further
+print(sys.getrefcount(abc)) # Number of times object used in the bytecode
 
 del abc
 
 # help(sys.getrefcount)
 
 # Garbage collection in Python called as "Generational Garbage Collection"
+"""
+When the reference object comes out of scope, the reference count is decremented.
+When the reference count reaches zero, means the Python object is not in use. 
+The memory which is assigned to the object gets deleted.
+"""
 """
 https://stackify.com/python-garbage-collection/
 
@@ -106,6 +110,41 @@ print(a not in varList3)
 print(a is int)
 print(varList3 is not int)
 
+# simple assignment and logical operators ***interesting*** https://docs.python.org/3/reference/simple_stmts.html
+
+# Mutable vs immutable Objects: https://www.geeksforgeeks.org/mutable-vs-immutable-objects-in-python/
+#Immutable Objects : These are of in-built types like int, float, bool, string, unicode, tuple.
+"""
+Mutable and immutable objects are handled differently in python. Immutable objects are quicker to access and are expensive to change because it involves the creation of a copy.
+Whereas mutable objects are easy to change.
+Use of mutable objects is recommended when there is a need to change the size or content of the object.
+"""
+tuple1 = (0, 1, 2, 3)
+#tuple1[0] = 4
+print(tuple1)
+
+message = "Welcome to GeeksforGeeks"
+#message[0] = 'p'
+print(message)
+
+#Mutable Objects : These are of type list, dict, set.
+# lists are mutable
+color = ["red", "blue", "green"]
+color[0] = "pink"
+color[-1] = "orange"
+print(color)
+
+# workaround for immutable objects
+tup = ([1,2,3,4], 'gaurav')
+tup[0].append(25)
+print(tup)
+
+# Multi target assignments
+a, b, c = 4, "gaurav", 24.5
+print("printed from multi target assignment {}, {}, {}".format(a, b, c))
+
+# ************ Add-on ************
+
 # List iteration: https://www.geeksforgeeks.org/iterate-over-a-list-in-python/
 list = [1, 3, 5, 7, 9]
 # Using for loop
@@ -130,38 +169,3 @@ while i < length:
 # Using list comprehension
 print("Using list comprehension")
 [print(i) for i in list]
-
-# simple assignment and logical operators ***interesting*** https://docs.python.org/3/reference/simple_stmts.html
-
-
-# Mutable vs immutable Objects: https://www.geeksforgeeks.org/mutable-vs-immutable-objects-in-python/
-#Immutable Objects : These are of in-built types like int, float, bool, string, unicode, tuple.
-"""
-Mutable and immutable objects are handled differently in python. Immutable objects are quicker to access and are expensive to change because it involves the creation of a copy.
-Whereas mutable objects are easy to change.
-Use of mutable objects is recommended when there is a need to change the size or content of the object.
-"""
-tuple1 = (0, 1, 2, 3)
-#tuple1[0] = 4
-print(tuple1)
-
-message = "Welcome to GeeksforGeeks"
-#message[0] = 'p'
-print(message)
-
-#Mutable Objects : These are of type list, dict, set.
-# lists are mutable
-color = ["red", "blue", "green"]
-color[0] = "pink"
-color[-1] = "orange"
-print(color)
-
-# woraround for immutable objects
-tup = ([1,2,3,4], 'gaurav')
-tup[0].append(25)
-print(tup)
-
-# Multi target assignments
-a, b, c = 4, "gaurav", 24.5
-print("printed from multi target assignment {}, {}, {}".format(a, b, c))
-

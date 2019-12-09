@@ -75,7 +75,6 @@ print(blu.dance())
 
 # Inheritance: https://www.programiz.com/python-programming/object-oriented-programming
 class Bird:
-
     def __init__(self):
         print("Bird is ready")
 
@@ -84,7 +83,6 @@ class Bird:
 
     def swim(self):
         print("Swim faster")
-
 
     # child class
 class Penguin(Bird):
@@ -200,4 +198,4 @@ class MappingSubclass(Mapping):
 
 print(issubclass(MappingSubclass, Mapping))
 
-Built-in functions for modules: https://www.tutorialsteacher.com/python/python-builtin-modules
+#Built-in functions for modules: https://www.tutorialsteacher.com/python/python-builtin-modules

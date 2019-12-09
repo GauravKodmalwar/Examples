@@ -1,3 +1,8 @@
+# White spaces are indentation either space or tabs
+
+# line termination is typically a new line or Enter. Python is very much particular
+# about indentation like new line or spaces or tabs
+
 # Single line comments are created using hash ==> #
 
 """
